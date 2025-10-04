@@ -6,7 +6,7 @@ venv/
 env/
 
 # History and IDE/Editor files
-.history/       # Keep this!
+.history/      
 .vscode/
 .idea/
 *.swp
