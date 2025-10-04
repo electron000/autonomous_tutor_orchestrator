@@ -43,7 +43,7 @@ uvicorn mock_concept_service:app --port 8003 --reload
 
 With all four services running, the entire system is now live and ready for the testing.
 
-Step 3: Perform the Demo using FastAPI's Interactive UI
+Step 3: Perform the test using FastAPI's Interactive UI
 This is the easiest and most visual way to conduct your demo.
 
 Open your web browser and navigate to http://127.0.0.1:8000/docs.
