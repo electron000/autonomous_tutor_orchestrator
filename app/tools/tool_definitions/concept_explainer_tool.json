@@ -1,4 +1,5 @@
 {
+  "description": "A tool to explain a specific concept in detail, tailored to the student's level.",
   "type": "object",
   "required": [
     "user_info",
@@ -21,33 +22,27 @@
       "properties": {
         "user_id": {
           "type": "string",
-          "description": "Unique identifier for the student",
-          "example": "student123"
+          "description": "Unique identifier for the student"
         },
         "name": {
           "type": "string",
-          "description": "Student's full name",
-          "example": "Bob"
+          "description": "Student's full name"
         },
         "grade_level": {
           "type": "string",
-          "description": "Student's current grade level",
-          "example": "7"
+          "description": "Student's current grade level"
         },
         "learning_style_summary": {
           "type": "string",
-          "description": "Summary of student's preferred learning style",
-          "example": "Auditory learner, prefers simple terms and step-by-step explanations"
+          "description": "Summary of student's preferred learning style"
         },
         "emotional_state_summary": {
           "type": "string",
-          "description": "Current emotional state of the student",
-          "example": "Curious and engaged in learning"
+          "description": "Current emotional state of the student"
         },
         "mastery_level_summary": {
           "type": "string",
-          "description": "Current mastery level description",
-          "example": "Level 4: Building foundational knowledge"
+          "description": "Current mastery level description"
         }
       }
     },
@@ -59,29 +54,28 @@
         "properties": {
           "role": {
             "type": "string",
-            "enum": ["user", "assistant"]
+            "enum": ["user", "assistant"],
+            "description": "Role of the message sender"
           },
           "content": {
-            "type": "string"
+            "type": "string",
+            "description": "Content of the message"
           }
         }
       }
     },
     "concept_to_explain": {
       "type": "string",
-      "description": "The specific concept to explain",
-      "example": "photosynthesis"
+      "description": "The specific concept to explain"
     },
     "current_topic": {
       "type": "string",
-      "description": "Broader topic context",
-      "example": "biology"
+      "description": "Broader topic context"
     },
     "desired_depth": {
       "type": "string",
       "enum": ["basic", "intermediate", "advanced", "comprehensive"],
-      "description": "Level of detail for the explanation",
-      "example": "medium"
+      "description": "Level of detail for the explanation"
     }
   }
 }

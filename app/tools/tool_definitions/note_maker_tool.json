@@ -1,4 +1,5 @@
 {
+  "description": "A tool to generate structured notes on a given topic and subject.",
   "type": "object",
   "required": [
     "user_info",
@@ -21,33 +22,27 @@
       "properties": {
         "user_id": {
           "type": "string",
-          "description": "Unique identifier for the student",
-          "example": "student123"
+          "description": "Unique identifier for the student"
         },
         "name": {
           "type": "string",
-          "description": "Student's full name",
-          "example": "Harry"
+          "description": "Student's full name"
         },
         "grade_level": {
           "type": "string",
-          "description": "Student's current grade level",
-          "example": "10"
+          "description": "Student's current grade level"
         },
         "learning_style_summary": {
           "type": "string",
-          "description": "Summary of student's preferred learning style",
-          "example": "Prefers outlines and structured notes"
+          "description": "Summary of student's preferred learning style"
         },
         "emotional_state_summary": {
           "type": "string",
-          "description": "Current emotional state of the student",
-          "example": "Relaxed and attentive"
+          "description": "Current emotional state of the student"
         },
         "mastery_level_summary": {
           "type": "string",
-          "description": "Current mastery level description",
-          "example": "Level 7: Proficient"
+          "description": "Current mastery level description"
         }
       }
     },
@@ -71,13 +66,11 @@
     },
     "topic": {
       "type": "string",
-      "description": "The main topic for note generation",
-      "example": "Water Cycle"
+      "description": "The main topic for note generation"
     },
     "subject": {
       "type": "string",
-      "description": "Academic subject area",
-      "example": "Environmental Science"
+      "description": "Academic subject area"
     },
     "note_taking_style": {
       "type": "string",

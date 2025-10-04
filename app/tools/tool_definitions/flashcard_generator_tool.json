@@ -1,4 +1,5 @@
 {
+  "description": "A tool to generate educational flashcards on a specific topic.",
   "type": "object",
   "required": ["user_info", "topic", "count", "difficulty", "subject"],
   "properties": {
@@ -15,53 +16,44 @@
       "properties": {
         "user_id": {
           "type": "string",
-          "description": "Unique identifier for the student",
-          "example": "student123"
+          "description": "Unique identifier for the student"
         },
         "name": {
           "type": "string",
-          "description": "Student's full name",
-          "example": "Charlie"
+          "description": "Student's full name"
         },
         "grade_level": {
           "type": "string",
-          "description": "Student's current grade level",
-          "example": "8"
+          "description": "Student's current grade level"
         },
         "learning_style_summary": {
           "type": "string",
-          "description": "Summary of student's preferred learning style",
-          "example": "Kinesthetic learner, learns best through practice and repetition"
+          "description": "Summary of student's preferred learning style"
         },
         "emotional_state_summary": {
           "type": "string",
-          "description": "Current emotional state of the student",
-          "example": "Focused and motivated to improve"
+          "description": "Current emotional state of the student"
         },
         "mastery_level_summary": {
           "type": "string",
-          "description": "Current mastery level description",
-          "example": "Level 6: Good understanding, ready for application"
+          "description": "Current mastery level description"
         }
       }
     },
     "topic": {
       "type": "string",
-      "description": "The topic for flashcard generation",
-      "example": "Photosynthesis"
+      "description": "The topic for flashcard generation"
     },
     "count": {
       "type": "integer",
       "description": "Number of flashcards to generate",
       "minimum": 1,
-      "maximum": 20,
-      "example": 5
+      "maximum": 20
     },
     "difficulty": {
       "type": "string",
       "enum": ["easy", "medium", "hard"],
-      "description": "Difficulty level of the flashcards",
-      "example": "medium"
+      "description": "Difficulty level of the flashcards"
     },
     "include_examples": {
       "type": "boolean",
@@ -70,8 +62,7 @@
     },
     "subject": {
       "type": "string",
-      "description": "Academic subject area",
-      "example": "Biology"
+      "description": "Academic subject area"
     }
   }
 }

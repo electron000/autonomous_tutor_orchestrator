@@ -12,7 +12,6 @@ C. Install Dependencies:
 The mock services require uvicorn and fastapi. If they aren't already installed, we can add them with pip:
 
 Bash
-
 pip install requirements.txt
 
 Step 2: Run All the Services
@@ -22,24 +21,41 @@ Terminal 1: Run My Orchestrator App
 Navigate to the project's root directory and run my main application:
 
 Bash
-uvicorn main:app --host 0.0.0.0 --port 8000
+uvicorn app.main:app --port 8000 --reload
 
 Terminal 2: Run the Mock Notes Service
 Navigate to the mock_services directory and run the first mock tool:
 
 Bash
-uvicorn mock_notes_service:app --host 0.0.0.0 --port 8001
+uvicorn mock_notes_service:app --port 8001 --reload
 
 Terminal 3: Run the Mock Flashcards Service
 In another terminal, navigate to the mock_services directory and run the second mock tool:
 
 Bash
-uvicorn mock_flashcards_service:app --host 0.0.0.0 --port 8002
+uvicorn mock_flashcards_service:app --port 8002 --reload
 
 Terminal 4: Run the Mock Concept Explainer Service
 Finally, in a fourth terminal, navigate to the mock_services directory and run the last mock tool:
 
 Bash
-uvicorn mock_concept_service:app --host 0.0.0.0 --port 8003
+uvicorn mock_concept_service:app --port 8003 --reload
 
 With all four services running, the entire system is now live and ready for the testing.
+
+Step 3: Perform the Demo using FastAPI's Interactive UI
+This is the easiest and most visual way to conduct your demo.
+
+Open your web browser and navigate to http://127.0.0.1:8000/docs.
+
+You will see the FastAPI Swagger UI for your orchestrator.
+
+Expand the POST /v1/chat endpoint.
+
+Click the "Try it out" button.
+
+You will see a text box for the "Request body". Delete the existing content and paste the JSON payloads from the demo_scenarios.md file for each scenario you want to demonstrate.
+
+Click the "Execute" button to send the request to your orchestrator and see the live response.
+
+Follow the scenarios in the demo_scenarios.md file to showcase the full capabilities of your system.
