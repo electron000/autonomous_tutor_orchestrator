@@ -1,0 +1,87 @@
+{
+  "type": "object",
+  "required": [
+    "user_info",
+    "chat_history",
+    "concept_to_explain",
+    "current_topic",
+    "desired_depth"
+  ],
+  "properties": {
+    "user_info": {
+      "type": "object",
+      "required": [
+        "user_id",
+        "name",
+        "grade_level",
+        "learning_style_summary",
+        "emotional_state_summary",
+        "mastery_level_summary"
+      ],
+      "properties": {
+        "user_id": {
+          "type": "string",
+          "description": "Unique identifier for the student",
+          "example": "student123"
+        },
+        "name": {
+          "type": "string",
+          "description": "Student's full name",
+          "example": "Bob"
+        },
+        "grade_level": {
+          "type": "string",
+          "description": "Student's current grade level",
+          "example": "7"
+        },
+        "learning_style_summary": {
+          "type": "string",
+          "description": "Summary of student's preferred learning style",
+          "example": "Auditory learner, prefers simple terms and step-by-step explanations"
+        },
+        "emotional_state_summary": {
+          "type": "string",
+          "description": "Current emotional state of the student",
+          "example": "Curious and engaged in learning"
+        },
+        "mastery_level_summary": {
+          "type": "string",
+          "description": "Current mastery level description",
+          "example": "Level 4: Building foundational knowledge"
+        }
+      }
+    },
+    "chat_history": {
+      "type": "array",
+      "description": "Recent conversation history for context",
+      "items": {
+        "type": "object",
+        "properties": {
+          "role": {
+            "type": "string",
+            "enum": ["user", "assistant"]
+          },
+          "content": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "concept_to_explain": {
+      "type": "string",
+      "description": "The specific concept to explain",
+      "example": "photosynthesis"
+    },
+    "current_topic": {
+      "type": "string",
+      "description": "Broader topic context",
+      "example": "biology"
+    },
+    "desired_depth": {
+      "type": "string",
+      "enum": ["basic", "intermediate", "advanced", "comprehensive"],
+      "description": "Level of detail for the explanation",
+      "example": "medium"
+    }
+  }
+}

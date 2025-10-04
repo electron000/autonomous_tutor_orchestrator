@@ -1,0 +1,77 @@
+{
+  "type": "object",
+  "required": ["user_info", "topic", "count", "difficulty", "subject"],
+  "properties": {
+    "user_info": {
+      "type": "object",
+      "required": [
+        "user_id",
+        "name",
+        "grade_level",
+        "learning_style_summary",
+        "emotional_state_summary",
+        "mastery_level_summary"
+      ],
+      "properties": {
+        "user_id": {
+          "type": "string",
+          "description": "Unique identifier for the student",
+          "example": "student123"
+        },
+        "name": {
+          "type": "string",
+          "description": "Student's full name",
+          "example": "Charlie"
+        },
+        "grade_level": {
+          "type": "string",
+          "description": "Student's current grade level",
+          "example": "8"
+        },
+        "learning_style_summary": {
+          "type": "string",
+          "description": "Summary of student's preferred learning style",
+          "example": "Kinesthetic learner, learns best through practice and repetition"
+        },
+        "emotional_state_summary": {
+          "type": "string",
+          "description": "Current emotional state of the student",
+          "example": "Focused and motivated to improve"
+        },
+        "mastery_level_summary": {
+          "type": "string",
+          "description": "Current mastery level description",
+          "example": "Level 6: Good understanding, ready for application"
+        }
+      }
+    },
+    "topic": {
+      "type": "string",
+      "description": "The topic for flashcard generation",
+      "example": "Photosynthesis"
+    },
+    "count": {
+      "type": "integer",
+      "description": "Number of flashcards to generate",
+      "minimum": 1,
+      "maximum": 20,
+      "example": 5
+    },
+    "difficulty": {
+      "type": "string",
+      "enum": ["easy", "medium", "hard"],
+      "description": "Difficulty level of the flashcards",
+      "example": "medium"
+    },
+    "include_examples": {
+      "type": "boolean",
+      "description": "Whether to include examples in flashcards",
+      "default": true
+    },
+    "subject": {
+      "type": "string",
+      "description": "Academic subject area",
+      "example": "Biology"
+    }
+  }
+}

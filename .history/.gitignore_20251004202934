@@ -1,0 +1,36 @@
+# Environment files
+.env
+.env/
+.venv/
+venv/
+env/
+
+# History and IDE/Editor files
+.history/       # Keep this!
+.vscode/
+.idea/
+*.swp
+
+# OS-generated files
+.DS_Store
+Thumbs.db
+
+# Compiled Python files and cache
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+
+# Distribution/Packaging
+build/
+dist/
+*.egg-info/
+*.egg
+
+# Testing and Coverage
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Logs
+*.log

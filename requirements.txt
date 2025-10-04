@@ -1,0 +1,11 @@
+fastapi
+uvicorn[standard]
+pydantic
+python-dotenv
+langchain
+langgraph
+langchain-openai
+httpx          
+psycopg2-binary
+pydantic-settings
+langchain-google-genai
